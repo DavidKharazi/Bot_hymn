@@ -1,3 +1,7 @@
+"""
+git pull origin master - если были изменения в гите
+"""
+
 from dotenv import load_dotenv
 import logging
 import os

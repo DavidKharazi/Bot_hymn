@@ -65,7 +65,7 @@ CHORDS = read_chord_files('chords')
 # Функция для поиска в песнях с использованием Gemini
 async def search_with_gemini(query):
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        model = genai.GenerativeModel('gemini-2.0-flash')
 
         # Подготавливаем данные о песнях для промпта
         songs_data = []
@@ -421,7 +421,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 async def get_spiritual_guidance_and_bible_verse(song_title, lyrics):
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        model = genai.GenerativeModel('gemini-2.0-flash')
 
         prompt = (f"Проанализируйте следующую песню с названием '{song_title}' и текстом:\n\n{lyrics}\n\n"
                   f"Выполните две задачи:\n"
